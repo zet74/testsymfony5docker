@@ -1,10 +1,10 @@
-name: Deploy EC2
+name: Deploy EC2 self-hosted
 on:
   release:
     types: [published]
 jobs:
   deploy-aws:
-    runs-on: self-hosted
+    runs-on: AWS-docker-host-01
     steps:
       - name: Checkout
         uses: actions/checkout@v2
