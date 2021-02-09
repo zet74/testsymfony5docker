@@ -3,8 +3,7 @@ on:
   release:
     types: [published]
 jobs:
-  merge-PR:
-    if: github.event.pull_request.merged == true
+  deploy-aws:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,4 +15,7 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: rsync over ssh
-        run: ./deploy_to_aws.sh
+        run: |
+          chmod +x ./docker/deploy_to_aws.sh
+          ./docker/deploy_to_aws.sh
+
