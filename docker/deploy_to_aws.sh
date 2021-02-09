@@ -2,7 +2,7 @@
 
 echo 'Starting to Deploy...'
 ssh ubuntu@ec2-15-236-211-78.eu-west-3.compute.amazonaws.com " sudo docker image prune -f
-        cd apps
+        cd apps/testsymfony5docker/
         sudo docker-compose down
         git fetch origin
         git reset --hard origin/master  &&  echo 'You are doing well'
