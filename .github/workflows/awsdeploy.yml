@@ -14,7 +14,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - name: rsync over ssh
+      - name: deploy over ssh
         run: |
           chmod +x ./docker/deploy_to_aws.sh
           ./docker/deploy_to_aws.sh
