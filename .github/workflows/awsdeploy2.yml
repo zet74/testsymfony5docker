@@ -4,7 +4,7 @@ on:
     types: [published]
 jobs:
   deploy-aws:
-    runs-on: AWS-docker-host-01
+    runs-on: [self-hosted]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
