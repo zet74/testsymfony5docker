@@ -17,5 +17,5 @@ jobs:
       - name: rsync over ssh
         run: |
           chmod +x ./docker/deploy_to_aws.sh
-          ./deploy_to_aws/sh
+          ./docker/deploy_to_aws.sh
 
