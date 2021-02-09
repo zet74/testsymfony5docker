@@ -3,8 +3,7 @@ on:
   release:
     types: [published]
 jobs:
-  merge-PR:
-    if: github.event.pull_request.merged == true
+  deploy-aws:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
